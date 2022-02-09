@@ -1,0 +1,5 @@
+/*pra estilizar o texto Passe o mouse sobre mim */
+.higlight {
+  background-color: yellow;
+  font-weight: bold;
+}

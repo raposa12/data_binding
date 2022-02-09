@@ -1,0 +1,137 @@
+<section class="property-binding">
+
+  <!--<article>
+    <h3>Interpolation / Interpolação</h3>
+    <p>String renderizada com interpolação: {{ url }}</p>
+    <p>Resultado de 1 + 1 é: {{ 1 + 1 }}</p>
+    <p>Resultado de 1 + 1 não é: {{ 1 + 1 + getValor()}}</p>
+    <p>Curso de Angular e gosto de curso: {{ cursoAngular && getCurtirCurso() }}</p>
+  </article>
+
+  <article>
+    <h3>Property Binding</h3>
+    <img src="{{ urlImagem }}">
+    <img [src]="urlImagem">
+    <img bind-src="urlImagem">
+  </article>-->
+
+  <!--<article>
+    <h3>Class e Style Binding</h3>
+  </article>
+  <div>
+    Selecione uma classe:
+    <select #classe (change)="0">
+      /aqui ele criou uma classe que sera chamado/
+      /esses sao lista de option que serao chamados abaixos no clique pra 
+      mostrar sua cor/
+      <option value="alert-success">Sucesso</option>
+      <option value="alert-info">Info</option>
+      <option value="alert-warning">Alert</option>
+      <option value="alert-danger">Erro</option>
+    </select>
+    <br><br>
+
+    /alqui ele se vinculou em todas as cores quando escolher qualquer opcçao
+    ele muda junto com essa opçao/
+    <div class="alert {{ classe.value }}" role="alert">
+      Texto colorido comforme valor do combobox
+    </div>
+
+    /aqui ele ta se vinculando com o alerta-sucess com isso
+    ele possblita mostra a sua cor em um clique/
+    <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">
+      Sucesso
+    </div>
+    <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">
+      Info
+    </div>
+    <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">
+      Alert
+    </div>
+    <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">
+      Erro
+    </div>
+
+    /caso for diferte no erro ele mostar essa mensagem emcima da cor 
+    Esse texto somente aparece em caso de erro./
+    <div class="alert alert-danger" role="alert" [style.display]="classe.value ==  'alert-danger' ? 'block' : 'none'">
+      Esse texto somente aparece em caso de erro.
+    </div>
+  </div>-->
+
+  <!--<section class="event-binding">
+    //class de evento
+    <article>
+      <h3>Event binding</h3>
+      <div>
+        //criou o botao em azul e chamou a sua funçao criada que quando
+        for clicado ele mostra o texto botaoClicado//
+        <button (click)="botaoClicado()" class="btn btn-primary">Me clique</button>
+/////////////////////////////////////////////////////////////////////////////////
+        <br><br>
+        //criou campo input e chamou o seu evento que quando digitado 
+          aparece na propia pagina html e chamou atambem a funcao de salvar
+        as letras digitadas//
+        <input type="text" (keyup)="onKeyUp($event)" (keyup.enter)="salvarValor(campoInput.value)" (blur)="salvarValor(campoInput.value)" #campoInput />
+
+        //aqui ele retornou os vaores das funçoes pra funcionar//
+        <p>Valor atual: {{ valorAtual }}</p>
+        <p>Valor atual: {{ valorSalvo }}</p>
+
+        <br>
+        funçao que passar em cima da letra Passe o mouse sobre mim ele fica amarelo
+        <span (mouseover)="onMouseOver()" (moseout)="onMouseOver()" [class.higlight]="isMouseOuver">
+          Passe o mouse sobre mim
+        </span>
+      </div>
+    </article>
+  </section>-->
+
+  <!--<section class="two-way-binding">
+    <article>
+      <h3>Two-way data binding</h3>
+      <div>
+
+        <input type="text" (keyup)="onKeyOp($event)" (keyup.enter)="nome" />
+
+        <input type="text" 
+        [value]="nome"
+        (input)="nome $event.target.value" />
+
+        <input type="text" 
+        [ngModel]="nome"
+        (ngModelChange)="nome $event" />
+
+        <input type="text" [(ngModel)]="nome" />
+
+        <p>Voce digitou: {{ nome }}</p>
+      </div>
+      <div>
+
+        //<p>Meu nome é {{ pessoa.nome }} e tenho {{ pessoa.idade}} anos de idade</p>
+        <input type="text" [(ngModel)]="pessoa.nome">
+        <input type="text" [(ngModel)]="pessoa.idade">//
+
+      </div>
+
+    </article>
+  </section>
+</section>-->
+
+  <section>
+
+    <article>
+      <h3>Input/Output Properties</h3>
+
+      <!--aqui ele chamou a variavel criada com o valor de nome angular
+      que sera imprimida na tela-->
+      <app-curso [nome]="nomeDoCurso"></app-curso>
+
+      <!--aqui ele esta imprimimdo o contador de + e - -->
+      <!--(mudouValor)="mudouValor($event)" -->
+      <!--fica dentro do contador-->
+      <contador></contador>
+
+    </article>
+
+  </section>
